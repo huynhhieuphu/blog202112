@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,12 +11,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
-Auth::routes();
+Route::get('/about', function () {
+    return view('pages.about');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts.index');
+Route::get('/posts/{id}', [App\Http\Controllers\PostController::class, 'show'])->name('posts.show');
 
 Route::group([
     'middleware' => 'auth',
@@ -35,3 +39,8 @@ Route::group([
         'tags' => TagController::class
     ]);
 });
+
+Auth::routes();
+
+
+

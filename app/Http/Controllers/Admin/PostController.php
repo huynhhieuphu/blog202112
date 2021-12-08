@@ -23,7 +23,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::paginate(5);
-        return view('Admin.Post.index', compact('posts'));
+        return view('Admin.Posts.index', compact('posts'));
     }
 
     /**
@@ -34,7 +34,7 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::where('is_active', 1)->get();
-        return view('Admin.Post.create', compact('categories'));
+        return view('Admin.Posts.create', compact('categories'));
     }
 
     /**
@@ -105,7 +105,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('Admin.Post.show', compact('post'));
+        return view('Admin.Posts.show', compact('post'));
     }
 
     /**
@@ -117,7 +117,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $categories = Category::where('is_active', 1)->get();
-        return view('Admin.Post.edit', compact('post', 'categories'));
+        return view('Admin.Posts.edit', compact('post', 'categories'));
     }
 
     /**

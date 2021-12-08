@@ -19,7 +19,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::paginate(5);
-        return view('Admin.Category.index', compact('categories'));
+        return view('Admin.Categories.index', compact('categories'));
     }
 
     /**
@@ -29,7 +29,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('Admin.Category.create');
+        return view('Admin.Categories.create');
     }
 
     /**
@@ -90,7 +90,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         $cate = Category::findOrFail($category);
-        return view('Admin.Category.edit', compact('category'));
+        return view('Admin.Categories.edit', compact('category'));
     }
 
     /**

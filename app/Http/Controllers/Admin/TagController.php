@@ -19,7 +19,7 @@ class TagController extends Controller
     public function index()
     {
         $tags = Tag::paginate(8);
-        return view('Admin.Tag.index', compact('tags'));
+        return view('Admin.Tags.index', compact('tags'));
     }
 
     /**
@@ -29,7 +29,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        return view('Admin.Tag.create');
+        return view('Admin.Tags.create');
     }
 
     /**
@@ -68,7 +68,7 @@ class TagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        return view('Admin.Tag.edit', compact('tag'));
+        return view('Admin.Tags.edit', compact('tag'));
     }
 
     /**
