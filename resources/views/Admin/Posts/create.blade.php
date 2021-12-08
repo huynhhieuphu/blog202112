@@ -92,3 +92,10 @@
     </div>
 </div>
 @endsection
+
+@push('script')
+<script>
+    CKEDITOR.replace('summary');
+    CKEDITOR.replace('content');
+</script>
+@endpush
