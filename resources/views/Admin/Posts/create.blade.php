@@ -95,7 +95,7 @@
 
 @push('script')
 <script>
-    CKEDITOR.replace('summary');
-    CKEDITOR.replace('content');
+    CKEDITOR.replace('summary', options);
+    CKEDITOR.replace('content', options);
 </script>
 @endpush

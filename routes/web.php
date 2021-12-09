@@ -47,5 +47,7 @@ Auth::routes([
     'confirm' => false
 ]);
 
-
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => 'web'], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
 
