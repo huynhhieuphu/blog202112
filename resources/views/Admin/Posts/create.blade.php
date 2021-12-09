@@ -67,7 +67,7 @@
                         </div>
                         <div class="form-group">
                             <label for="tags">Tags</label>
-                            <input type="text" name="tags" id="tags" class="form-control" value="{{ old('content') }}">
+                            <input type="text" name="tags" id="tags" class="form-control" value="{{ old('tags') }}">
                         </div>
                         <div class="form-group">
                             <div class="form-check form-check-inline">

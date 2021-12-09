@@ -23,7 +23,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">{!! $post->summary !!}</h6>
                     @endisset
                     <p class="card-text">
-                        <div class="btn btn-outline-secondary" id="category">{!! $post->category->name !!}</div>
+                        <div class="btn btn-outline-secondary" id="category">{{ $post->category->name }}</div>
                     </p>
                     <p class="card-text">
                         <span>
@@ -36,7 +36,7 @@
                         </span>
                     </p>
                     <p class="card-text">
-                        {{ $post->content }}
+                        {!! $post->content !!}
                     </p>
                     <p class="card-text">
                         @foreach ($post->tags as $tag)

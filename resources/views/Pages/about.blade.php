@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">About</div>
+                <h2 class="card-header">About</h2>
 
                 <div class="card-body">
                     

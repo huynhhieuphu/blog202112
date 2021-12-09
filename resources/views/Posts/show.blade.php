@@ -40,7 +40,7 @@
                         @endforeach
                     </p>
                     <p class="card-text">
-                        {{ $post->content }}
+                        {!! $post->content !!}
                     </p>
                 </div>
             </div> {{-- end .card --}}
